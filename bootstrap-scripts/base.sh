@@ -44,7 +44,7 @@ mount -a
 # Install the salt minion
 export DEBIAN_FRONTEND=noninteractive
 wget -O install_salt.sh https://bootstrap.saltstack.com
-sh install_salt.sh -D -U stable 2015.8.11
+sh install_salt.sh -D -U stable ${SALT_VERSION}
 
 # Set the master address the minion will register itself with
 cat > /etc/salt/minion <<EOF

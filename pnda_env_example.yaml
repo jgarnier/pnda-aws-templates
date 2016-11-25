@@ -30,6 +30,9 @@ cloud_formation_parameters:
   # CIDR specifying the address range for the private subnet
   privateSubnetCidr: 10.0.1.0/24
 platform_salt:
+  # Version of salt to install
+  SALT_VERSION: 2015.8.11
+
   # Use either PLATFORM_GIT_REPO_URI + PLATFORM_GIT_BRANCH or PLATFORM_SALT_LOCAL
 
   # URI of platform salt git repository
