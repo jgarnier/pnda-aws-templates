@@ -151,6 +151,13 @@ anaconda:
 EOF
 fi
 
+if [ "x$NPM_REGISTRY" != "x" ] ; then
+cat << EOF >> /srv/salt/platform-salt/pillar/env_parameters.sls
+npm:
+  registry: '$NPM_REGISTRY'
+EOF
+fi
+
 if [ "x$PACKAGES_SERVER_URI" != "x" ] ; then
 cat << EOF >> /srv/salt/platform-salt/pillar/env_parameters.sls
 packages_server:
