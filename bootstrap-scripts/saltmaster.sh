@@ -160,6 +160,13 @@ anaconda:
 EOF
 fi
 
+if [ "x$NPM_REGISTRY" != "x" ] ; then
+cat << EOF >> /srv/salt/platform-salt/pillar/env_parameters.sls
+npm:
+  registry: '$NPM_REGISTRY'
+EOF
+fi
+
 if [ "x$PIP_EXTRA_INDEX$" != "x" ] ; then
 cat << EOF >> /srv/salt/platform-salt/pillar/env_parameters.sls
 pip:

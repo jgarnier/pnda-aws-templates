@@ -89,6 +89,7 @@ mirrors:
   # These mirrors are optional and may be hosted on any HTTP server, including the PNDA component package server
   # CLOUDERA_MIRROR: http://x.x.x.x/cloudera_repo
   # ANACONDA_MIRROR: http://x.x.x.x/anaconda_repo
+  # NPM_REGISTRY: https://registry.npmjs.org/
   # OS_PACKAGE_MIRROR: http://x.x.x.x/components/deb-pkg/pnda-debs.zip
   # PIP_EXTRA_INDEX : http://x.x.x.x/
   # EXTRA_MIRROR: http://x.x.x.x/extra_mirror/
