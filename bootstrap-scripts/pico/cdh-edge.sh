@@ -159,6 +159,20 @@ anaconda:
 EOF
 fi
 
+if [ "x$PIP_EXTRA_INDEX$" != "x" ] ; then
+cat << EOF >> /srv/salt/platform-salt/pillar/env_parameters.sls
+pip:
+  extra_index_url: '$PIP_EXTRA_INDEX$'
+EOF
+fi
+
+if [ "x$EXTRA_MIRROR$" != "x" ] ; then
+cat << EOF >> /srv/salt/platform-salt/pillar/env_parameters.sls
+extra:
+  mirror: '$EXTRA_MIRROR$'
+EOF
+fi
+
 if [ "x$PACKAGES_SERVER_URI" != "x" ] ; then
 cat << EOF >> /srv/salt/platform-salt/pillar/env_parameters.sls
 packages_server:
